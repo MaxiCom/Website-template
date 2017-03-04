@@ -1,0 +1,18 @@
+{
+  "name": "website-template",
+  "version": "1.0.0",
+  "author": "Maxime Morlet",
+  "devDependencies": {
+    "jshint": "latest",
+    
+		"gulp": "latest",
+		"gulp-htmlmin": "latest",    
+		"gulp-sass": "latest",
+    "gulp-jshint": "latest",
+    "gulp-jsmin": "latest",
+    "gulp-livereload": "latest",
+    "gulp-rename": "latest",
+    "gulp-concat": "latest",
+    "gulp-clean": "latest"
+  }
+}
