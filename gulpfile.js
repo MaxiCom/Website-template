@@ -70,7 +70,7 @@ gulp.task('clean-scripts', function() {
 });
 
 // OTHER TASKS //
-gulp.task('watch', function() {
+gulp.task('watch-daemon', function() {
 	livereload.listen();
 
 	gulp.watch(source + html_source + html_sources, ['html']);
@@ -79,4 +79,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['html', 'sass', 'javascript']);
+gulp.task('watch', ['default', 'watch-daemon']);
 gulp.task('clean', ['clean-html', 'clean-sass', 'clean-scripts']);
