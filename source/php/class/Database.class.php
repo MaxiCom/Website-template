@@ -1,11 +1,11 @@
 <?php
 
-const DATABASE_TYPE = '';
-const DATABASE_HOST = '';
-const DATABASE_PORT = '';
-const DATABASE_NAME = '';
-const DATABASE_USERNAME = '';
-const DATABASE_PASSWORD = '';
+const DATABASE_TYPE = 'mysql';
+const DATABASE_HOST = 'localhost';
+const DATABASE_PORT = '3306';
+const DATABASE_NAME = 'TOCHANGE';
+const DATABASE_USERNAME = 'root';
+const DATABASE_PASSWORD = 'yoloswag';
 
 class Database {
 	public function __construct($type, $host, $port, $name, $username, $password) {
@@ -33,11 +33,12 @@ class Database {
 		return $this->_databaseHandle;
 	}
 
-	public function query($statement, $values) {
+	public function query($statement, $values, $fetch = true) {
 		$PDOStatement = $this->_databaseHandle->prepare($statement);
 		$PDOStatement->execute($values);
 
-		return $PDOStatement->fetchAll(PDO::FETCH_ASSOC);
+		if ($fetch)
+			return $PDOStatement->fetchAll(PDO::FETCH_ASSOC);
 	}
 
 	public function closeConnection() {
