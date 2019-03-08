@@ -4,7 +4,7 @@
   "author": "Maxime Morlet",
   "devDependencies": {
     "jshint": "latest",
-    "gulp": "latest",
+    "gulp": "3.9.1",
     "gulp-htmlmin": "latest",
     "gulp-sass": "latest",
     "gulp-jshint": "latest",
